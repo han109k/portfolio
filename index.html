@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en" data-view="visitor">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ayhan aksoy — full stack developer</title>
+    <meta
+      name="description"
+      content="ayhan aksoy, full stack developer in izmir. typescript, node.js, graphql, postgresql, react."
+    />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph (link previews) -->
+    <meta property="og:title" content="ayhan aksoy — full stack developer" />
+    <meta
+      property="og:description"
+      content="typescript end to end. node.js, graphql, postgresql, react."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-image.png" />
+
+    <link
+      rel="icon"
+      href="assets/favicon-32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Set the view before first paint so there is no flash of the wrong content -->
+    <script>
+      (function () {
+        var v = new URLSearchParams(location.search).get("view");
+        if (!v) {
+          try {
+            v = localStorage.getItem("view");
+          } catch (e) {}
+        }
+        if (v === "visitor" || v === "recruiter")
+          document.documentElement.dataset.view = v;
+
+        var t = null;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (t === "light" || t === "dark")
+          document.documentElement.dataset.theme = t;
+      })();
+    </script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">skip to content</a>
+
+    <div class="wrap">
+      <header class="site-header">
+        <a class="wordmark" href="#">ayhan aksoy</a>
+
+        <nav class="nav" aria-label="Primary" data-view="visitor">
+          <a href="#chart">chart</a>
+          <a href="#today">today</a>
+          <a href="#work">work</a>
+          <a href="#contact">contact</a>
+        </nav>
+        <nav class="nav" aria-label="Primary" data-view="recruiter">
+          <a href="#experience">experience</a>
+          <a href="#skills">skills</a>
+          <a href="#work">work</a>
+          <a href="#contact">contact</a>
+        </nav>
+
+        <button
+          type="button"
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="switch to dark mode"
+        >
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.33"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1.33">
+              <circle cx="12" cy="12" r="4.5" />
+              <path
+                d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"
+                stroke-linecap="round"
+              />
+            </g>
+          </svg>
+        </button>
+      </header>
+
+      <main id="main">
+        <!-- ============ VISITOR VIEW ============ -->
+
+        <section id="top" class="hero section" data-view="visitor">
+          <div class="hero-text">
+            <p class="label">full stack developer · izmir, türkiye</p>
+            <h1 class="display">
+              builds things that <em>talk</em> to each other.
+            </h1>
+            <p class="lede">
+              typescript end to end. node.js services, graphql and rest apis,
+              postgresql underneath, react on top. client work since 2019.
+            </p>
+            <div class="actions">
+              <a class="btn btn-solid" href="#work">see the work</a>
+              <a class="btn" href="#contact">say hello</a>
+            </div>
+          </div>
+
+          <figure class="chart">
+            <svg
+              viewBox="0 0 520 520"
+              role="img"
+              aria-label="A natal-chart style diagram placing typescript, node.js, graphql, postgresql and react on concentric orbits"
+            >
+              <g fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="260" cy="260" r="240" />
+                <circle cx="260" cy="260" r="180" opacity="0.7" />
+                <circle cx="260" cy="260" r="120" opacity="0.55" />
+                <circle cx="260" cy="260" r="60" opacity="0.4" />
+                <line x1="20" y1="260" x2="500" y2="260" opacity="0.3" />
+                <line x1="260" y1="20" x2="260" y2="500" opacity="0.3" />
+                <line
+                  x1="90"
+                  y1="90"
+                  x2="430"
+                  y2="430"
+                  opacity="0.18"
+                  stroke-dasharray="2 6"
+                />
+                <line
+                  x1="430"
+                  y1="90"
+                  x2="90"
+                  y2="430"
+                  opacity="0.18"
+                  stroke-dasharray="2 6"
+                />
+                <polygon
+                  points="260,200 364,320 140,468 91,198 444,106"
+                  opacity="0.45"
+                />
+              </g>
+              <g fill="currentColor">
+                <circle cx="260" cy="260" r="3" />
+                <circle cx="260" cy="200" r="5" />
+                <circle cx="364" cy="320" r="5" />
+                <circle cx="91" cy="198" r="5" />
+                <circle cx="444" cy="106" r="5" />
+                <circle cx="140" cy="468" r="5" />
+              </g>
+              <g
+                fill="currentColor"
+                font-family="IBM Plex Mono, monospace"
+                font-size="13"
+                letter-spacing="1"
+              >
+                <text x="272" y="194">typescript</text>
+                <text x="376" y="324">node.js</text>
+                <text x="103" y="186">graphql</text>
+                <text x="432" y="92" text-anchor="end">postgresql</text>
+                <text x="152" y="490">react</text>
+              </g>
+            </svg>
+            <figcaption class="label">
+              developer chart · rising since 01.2022
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="chart" class="section" data-view="visitor">
+          <div class="section-head">
+            <p class="label">01 — the chart</p>
+            <h2 class="h2">placements</h2>
+          </div>
+          <ul class="placements">
+            <li>
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="13"
+                  fill="none"
+                  stroke="currentColor"
+                />
+                <circle cx="16" cy="16" r="2.5" fill="currentColor" />
+              </svg>
+              <div>
+                <h3>sun in typescript</h3>
+                <p>the core. types first, then everything else.</p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path
+                  d="M20 3a13 13 0 1 0 0 26a10 10 0 0 1 0-26z"
+                  fill="none"
+                  stroke="currentColor"
+                />
+              </svg>
+              <div>
+                <h3>moon in node.js</h3>
+                <p>
+                  where it goes when nobody is looking: services, queues,
+                  scripts.
+                </p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path
+                  d="M16 28V5M7 14l9-9l9 9M4 28h24"
+                  fill="none"
+                  stroke="currentColor"
+                />
+              </svg>
+              <div>
+                <h3>rising in react</h3>
+                <p>the first thing you see.</p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <circle
+                  cx="16"
+                  cy="13"
+                  r="6"
+                  fill="none"
+                  stroke="currentColor"
+                />
+                <path
+                  d="M10 3a6 6 0 0 0 12 0M16 19v10M11 24h10"
+                  fill="none"
+                  stroke="currentColor"
+                />
+              </svg>
+              <div>
+                <h3>mercury in graphql</h3>
+                <p>how it communicates. schemas as contracts.</p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path
+                  d="M10 4h8M14 4v24M14 14c3-4 12-3 10 4c-1 4-6 6-4 10"
+                  fill="none"
+                  stroke="currentColor"
+                />
+              </svg>
+              <div>
+                <h3>saturn in postgresql</h3>
+                <p>structure, constraints, things that last.</p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path
+                  d="M6 8c6-4 10 0 8 8c-2 8 2 10 10 10M8 20h16"
+                  fill="none"
+                  stroke="currentColor"
+                />
+              </svg>
+              <div>
+                <h3>jupiter in engineering</h3>
+                <p>b.sc. computer engineering. the ground it grew from.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section id="today" class="section" data-view="visitor">
+          <div class="section-head">
+            <p class="label">02 — today</p>
+            <h2 class="h2">today is good for <em>shipping</em>.</h2>
+          </div>
+          <div class="columns">
+            <div class="col">
+              <h3 class="col-title">do</h3>
+              <ul>
+                <li>write the schema first</li>
+                <li>name things well</li>
+                <li>leave it better than you found it</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="col-title">don't</h3>
+              <ul>
+                <li>reach for any</li>
+                <li>ship the n+1 query</li>
+                <li>merge on a friday</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="col-title">current transit</h3>
+              <p class="dim">[WHAT YOU ARE BUILDING OR LEARNING RIGHT NOW]</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ RECRUITER VIEW ============ -->
+
+        <section id="top-recruiter" class="section intro" data-view="recruiter">
+          <p class="label">for recruiters · résumé view</p>
+          <h1 class="display">full stack developer.</h1>
+          <p class="lede wide">
+            typescript across the stack: node.js and graphql on the backend,
+            postgresql for data, react on the frontend. building client projects
+            at univenn since january 2022.
+          </p>
+          <dl class="facts">
+            <div>
+              <dt class="label">based in</dt>
+              <dd>izmir, türkiye</dd>
+            </div>
+            <div>
+              <dt class="label">current role</dt>
+              <dd>univenn · since jan 2022</dd>
+            </div>
+            <div>
+              <dt class="label">education</dt>
+              <dd>b.sc. computer engineering</dd>
+            </div>
+            <div>
+              <dt class="label">open to</dt>
+              <dd>[REMOTE / HYBRID / RELOCATION]</dd>
+            </div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-solid" href="assets/[CV].pdf" download
+              >download cv</a
+            >
+            <a class="btn" href="#contact">get in touch</a>
+          </div>
+        </section>
+
+        <section id="experience" class="section" data-view="recruiter">
+          <div class="section-head">
+            <p class="label">01 — experience</p>
+            <h2 class="h2">experience</h2>
+          </div>
+          <div class="timeline">
+            <article class="entry">
+              <div class="entry-meta">
+                <p class="label">jan 2022 — present</p>
+                <p>univenn</p>
+              </div>
+              <div class="entry-body">
+                <h3 class="entry-title">full stack developer</h3>
+                <p class="dim">
+                  client projects with typescript, node.js, graphql, postgresql
+                  and react.
+                </p>
+                <ul class="dashes">
+                  <li>[ACHIEVEMENT WITH A MEASURABLE RESULT]</li>
+                  <li>[ACHIEVEMENT WITH A MEASURABLE RESULT]</li>
+                  <li>[ACHIEVEMENT WITH A MEASURABLE RESULT]</li>
+                </ul>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">
+                <p class="label">[START] — [END]</p>
+                <p>[UNIVERSITY]</p>
+              </div>
+              <div class="entry-body">
+                <h3 class="entry-title">b.sc. computer engineering</h3>
+                <p class="dim">[THESIS, FOCUS AREA OR HONOURS — OPTIONAL]</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills" class="section" data-view="recruiter">
+          <div class="section-head">
+            <p class="label">02 — skills</p>
+            <h2 class="h2">skills</h2>
+          </div>
+          <div class="columns">
+            <div class="col">
+              <h3 class="col-title">language</h3>
+              <ul>
+                <li>typescript</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="col-title">backend</h3>
+              <ul>
+                <li>node.js</li>
+                <li>graphql</li>
+                <li>postgresql</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="col-title">frontend</h3>
+              <ul>
+                <li>react</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="col-title">tooling</h3>
+              <p class="dim">[TESTING, CI/CD, CLOUD, ETC.]</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SHARED ============ -->
+
+        <section id="work" class="section">
+          <div class="section-head">
+            <p class="label">03 — selected work</p>
+            <h2 class="h2">the work</h2>
+          </div>
+          <ol class="work">
+            <li>
+              <a href="#">
+                <span class="work-index">i.</span>
+                <span class="work-main"
+                  ><span class="work-title">[PROJECT NAME]</span
+                  ><span class="dim"
+                    >[ONE LINE: WHAT IT DOES AND YOUR ROLE]</span
+                  ></span
+                >
+                <span class="work-meta label">[STACK] · [YEAR]</span>
+                <span class="work-cta">view →</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="work-index">ii.</span>
+                <span class="work-main"
+                  ><span class="work-title">[PROJECT NAME]</span
+                  ><span class="dim"
+                    >[ONE LINE: WHAT IT DOES AND YOUR ROLE]</span
+                  ></span
+                >
+                <span class="work-meta label">[STACK] · [YEAR]</span>
+                <span class="work-cta">view →</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="work-index">iii.</span>
+                <span class="work-main"
+                  ><span class="work-title">[PROJECT NAME]</span
+                  ><span class="dim"
+                    >[ONE LINE: WHAT IT DOES AND YOUR ROLE]</span
+                  ></span
+                >
+                <span class="work-meta label">[STACK] · [YEAR]</span>
+                <span class="work-cta">view →</span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section id="contact" class="section contact">
+          <div data-view="visitor">
+            <p class="label">04 — compatibility</p>
+            <h2 class="display">are we <em>compatible?</em></h2>
+            <p class="lede">
+              if your project needs someone who gets along with its whole stack,
+              write to me.
+            </p>
+          </div>
+          <div data-view="recruiter">
+            <p class="label">04 — contact</p>
+            <h2 class="display">let's talk.</h2>
+            <p class="lede">
+              for roles, interviews or references, email is the fastest way to
+              reach me.
+            </p>
+          </div>
+          <div class="actions center">
+            <a class="btn btn-solid" href="mailto:[YOUR EMAIL]">EMAIL</a>
+            <a class="btn" href="[GITHUB URL]" rel="me noopener" target="_blank"
+              >github</a
+            >
+            <a
+              class="btn"
+              href="[LINKEDIN URL]"
+              rel="me noopener"
+              target="_blank"
+              >linkedin</a
+            >
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer label">
+        <span
+          >© <span id="year">2026</span> ayhan aksoy ·
+          <span data-version>dev</span></span
+        >
+        <span>izmir · 38.42° n, 27.14° e</span>
+      </footer>
+    </div>
+
+    <!-- Floating view switch -->
+    <div class="switch-dock">
+      <div class="switch" role="group" aria-label="View this site as">
+        <button type="button" data-set-view="visitor" aria-pressed="true">
+          visitor
+        </button>
+        <button type="button" data-set-view="recruiter" aria-pressed="false">
+          recruiter
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
